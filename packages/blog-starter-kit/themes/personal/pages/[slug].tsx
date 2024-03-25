@@ -17,7 +17,6 @@ import { DateFormatter } from '../components/date-formatter';
 import { Footer } from '../components/footer';
 import { Layout } from '../components/layout';
 import { MarkdownToHtml } from '../components/markdown-to-html';
-import { PersonalHeader } from '../components/personal-theme-header';
 import {
 	PageByPublicationDocument,
 	PostFullFragment,
@@ -28,6 +27,7 @@ import {
 } from '../generated/graphql';
 // @ts-ignore
 import { triggerCustomWidgetEmbed } from '@starter-kit/utils/trigger-custom-widget-embed';
+import { Navbar } from '../components/navbar';
 
 type PostProps = {
 	type: 'post';
@@ -128,10 +128,8 @@ const Post = ({ publication, post }: PostProps) => {
 				/>
 				<style dangerouslySetInnerHTML={{ __html: highlightJsMonokaiTheme }}></style>
 			</Head>
-			<h1 className="text-4xl leading-tight tracking-tight text-black dark:text-white">
-				{post.title}
-			</h1>
-			<div className="text-neutral-600 dark:text-neutral-400">
+			<h1 className="text-4xl leading-tight tracking-tight">{post.title}</h1>
+			<div className="text-gray font-mono text-base">
 				<DateFormatter dateString={post.publishedAt} />
 			</div>
 			{!!coverImageSrc && (
@@ -168,8 +166,9 @@ export default function PostOrPage(props: Props) {
 	return (
 		<AppProvider publication={publication} post={maybePost}>
 			<Layout>
-				<Container className="mx-auto flex max-w-3xl flex-col items-stretch gap-10 px-5 py-10">
-					<PersonalHeader />
+				<Container className="flex flex-col items-stretch gap-10">
+					{/* <PersonalHeader /> */}
+					<Navbar />
 					<article className="flex flex-col items-start gap-10 pb-10">
 						{props.type === 'post' && <Post {...props} />}
 						{props.type === 'page' && <Page {...props} />}

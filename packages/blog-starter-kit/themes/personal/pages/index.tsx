@@ -93,7 +93,7 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 				</Head>
 				<Container className="flex flex-col items-stretch gap-10">
 					{/* <PersonalHeader /> */}
-					<Navbar />
+					<Navbar pageType="blog" />
 					<div className="flex flex-col">
 						{/* <h2 className="mb-8 text-3xl font-bold uppercase">Blog</h2> */}
 						{posts.length > 0 && <MinimalPosts context="home" posts={posts} />}
