@@ -1315,10 +1315,10 @@ type GroupedByReferrerHostVisitors implements Node & Visitors {
 
 type GroupedByTimeViews implements Node & Views {
   """The start of the time range that these views belong to."""
-  from: DateTime!
+  from: String!
   id: ID!
   """The end of the time range that these views belong to."""
-  to: DateTime!
+  to: String!
   """The aggregated views."""
   total: Int!
 }
@@ -1328,10 +1328,10 @@ Visitors implementation that will be returned if a grouping by time is provided.
 """
 type GroupedByTimeVisitors implements Node & Visitors {
   """The start of the time range that these visitors visited the page."""
-  from: DateTime!
+  from: String!
   id: ID!
   """The end of the time range that these visitors visited the page."""
-  to: DateTime!
+  to: String!
   """The aggregated number of visitors."""
   total: Int!
 }

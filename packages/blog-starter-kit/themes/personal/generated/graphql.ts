@@ -1311,10 +1311,10 @@ export type GroupedByReferrerHostVisitors = Node & Visitors & {
 export type GroupedByTimeViews = Node & Views & {
   __typename?: 'GroupedByTimeViews';
   /** The start of the time range that these views belong to. */
-  from: Scalars['DateTime']['output'];
+  from: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   /** The end of the time range that these views belong to. */
-  to: Scalars['DateTime']['output'];
+  to: Scalars['String']['output'];
   /** The aggregated views. */
   total: Scalars['Int']['output'];
 };
@@ -1323,10 +1323,10 @@ export type GroupedByTimeViews = Node & Views & {
 export type GroupedByTimeVisitors = Node & Visitors & {
   __typename?: 'GroupedByTimeVisitors';
   /** The start of the time range that these visitors visited the page. */
-  from: Scalars['DateTime']['output'];
+  from: Scalars['String']['output'];
   id: Scalars['ID']['output'];
   /** The end of the time range that these visitors visited the page. */
-  to: Scalars['DateTime']['output'];
+  to: Scalars['String']['output'];
   /** The aggregated number of visitors. */
   total: Scalars['Int']['output'];
 };
