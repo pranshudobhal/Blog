@@ -58,3 +58,7 @@ h5,
 h6 {
 	font-family: var(--font-roboto);
 }
+
+h2 {
+	color: theme('colors.white') !important;
+}
