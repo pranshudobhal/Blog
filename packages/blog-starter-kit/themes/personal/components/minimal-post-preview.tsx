@@ -24,14 +24,14 @@ export const MinimalPostPreview = ({ title, date, slug, commentCount }: Props) =
 				<Link href={postURL} className="text-gray mt-2 font-mono text-sm">
 					<DateFormatter dateString={date} />
 				</Link>
-				{commentCount > 2 && (
+				{/* {commentCount > 2 && (
 					<>
 						<span className="mt-2">&middot;</span>
 						<Link href={postURL} className="text-gray mt-2 font-mono text-sm">
 							{commentCount} comments
 						</Link>
 					</>
-				)}
+				)} */}
 			</p>
 		</section>
 	);
