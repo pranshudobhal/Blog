@@ -57,8 +57,14 @@ h4,
 h5,
 h6 {
 	font-family: var(--font-roboto);
+	color: theme('colors.white') !important;
 }
 
-h2 {
+p strong,
+blockquote {
 	color: theme('colors.white') !important;
+}
+
+a {
+	color: unset !important;
 }
