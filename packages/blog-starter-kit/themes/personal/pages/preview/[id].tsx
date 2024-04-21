@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { Container } from '../../components/container';
 import { AppProvider } from '../../components/contexts/appContext';
 import { CoverImage } from '../../components/cover-image';
-import { Footer } from '../../components/footer';
 import { Layout } from '../../components/layout';
 import { MarkdownToHtml } from '../../components/markdown-to-html';
 import { PersonalHeader } from '../../components/personal-theme-header';
@@ -77,7 +76,7 @@ export default function Post({ publication, post }: Props) {
 							</div>
 						)}
 					</article>
-					<Footer />
+					{/* <Footer /> */}
 				</Container>
 			</Layout>
 		</AppProvider>

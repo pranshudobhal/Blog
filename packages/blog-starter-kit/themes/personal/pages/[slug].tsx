@@ -14,7 +14,6 @@ import { Container } from '../components/container';
 import { AppProvider } from '../components/contexts/appContext';
 import { CoverImage } from '../components/cover-image';
 import { DateFormatter } from '../components/date-formatter';
-import { Footer } from '../components/footer';
 import { Layout } from '../components/layout';
 import { MarkdownToHtml } from '../components/markdown-to-html';
 import {
@@ -173,7 +172,7 @@ export default function PostOrPage(props: Props) {
 						{props.type === 'post' && <Post {...props} />}
 						{props.type === 'page' && <Page {...props} />}
 					</article>
-					<Footer />
+					{/* <Footer /> */}
 				</Container>
 			</Layout>
 		</AppProvider>

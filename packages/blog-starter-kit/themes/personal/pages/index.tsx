@@ -7,7 +7,6 @@ import { useState } from 'react';
 import { Waypoint } from 'react-waypoint';
 import { Container } from '../components/container';
 import { AppProvider } from '../components/contexts/appContext';
-import { Footer } from '../components/footer';
 import { Layout } from '../components/layout';
 import { MinimalPosts } from '../components/minimal-posts';
 import { Navbar } from '../components/navbar';
@@ -107,7 +106,7 @@ export default function Index({ publication, initialPosts, initialPageInfo }: Pr
 						)}
 					</div>
 
-					<Footer />
+					{/* <Footer /> */}
 				</Container>
 			</Layout>
 		</AppProvider>
